@@ -61,9 +61,9 @@ data_hsc2 = data_hsc1.findAll('td')
 hsc=data_hsc2[3].text
 print("한국기술교육대학교 일반전형 모집인원 : 14, 현시간 경쟁률 - {}".format(hsc))
 
-# html7 = requests.get('http://ratio.uwayapply.com/Sl5KMCYlVzpKXiUmOiZKZmZUZg==')
-# soup_7 = bs(html7.text,'html.parser')
-# data_unist1 = soup_7.find('div',{'id':'table'})
-# data_unist2 = data_unist1.findAll('td')
-# unist=data_unist2[3].text
-# print("unist 일반전형 모집인원 : 280, 현시간 경쟁률 - {}".format(unist).rjust(100))
+html7 = requests.get('http://ratio.uwayapply.com/Sl5KMCYlVzpKXiUmOiZKZmZUZg==')
+soup_7 = bs(html7.text,'html.parser')
+data_unist1 = soup_7.find('div',{'id':'table'})
+data_unist2 = data_unist1.findAll('td')
+unist=data_unist2[3].text
+print("unist 일반전형 모집인원 : 280, 현시간 경쟁률 - {}".format(unist).rjust(100))
