@@ -15,7 +15,7 @@ print("아주대학교 Ace전형 기계공학과 모집인원 : 35, 현시간 �
 html = requests.get('http://addon.jinhakapply.com/RatioV1/RatioH/Ratio11040241.html')
 soup = bs(html.text,'html.parser')
 data_ajou3 = soup.find('div',{'id':'SelType406'})
-data_ajou4 = data_ajou3.findAll('td',{'class':'rate4'})
+data_ajou4 = data_ajou3.findAll('td',{'class':'rate2'})
 ajou1 = data_ajou4[0].text
 print("아주대학교 고른기회2전형 기계공학과 모집인원 : 5.  현시간 경쟁률 - {}".format(ajou1))
 
@@ -37,9 +37,9 @@ html4 = requests.get('http://addon.jinhakapply.com/RatioV1/RatioH/Ratio11400231.
 soup_4 = bs(html4.text,'html.parser')
 data_cn1 = soup_4.find('div',{'id':'SelType413'})
 data_cn2 = data_cn1.findAll('td',{'class':'rate4'})
-cn=data_cn2[42].text
+cn=data_cn2[1].text
 print("충남대학교 PRISM전형 기계공학과 모집인원 : 16, 현시간 경쟁률 - {}".format(cn))
-  
+
 html5 = requests.get('http://ratio.uwayapply.com/Sl5KMCYlckpeJSY6JkpmZlRm')
 soup_5 = bs(html5.text,'html.parser')
 data_gist1 = soup_5.find('div',{'id':'table'})
@@ -52,7 +52,7 @@ soup_6 = bs(html6.text,'html.parser')
 data_dgist1 = soup_6.find('div',{'id':'table'})
 data_dgist2 = data_dgist1.findAll('td')
 dgist=data_dgist2[3].text
-print("dgist 일반전형 모집인원 : {}, 현시간 경쟁률 - {}".format(data_dgist2[1].text,gist))
+print("dgist 일반전형 모집인원 : {}, 현시간 경쟁률 - {}".format(data_dgist2[1].text,dgist))
 
 html8 = requests.get('http://ratio.uwayapply.com/Sl5KfExgMDhgfWE5SmYlJjomSmZmVGY=')
 soup_8 = bs(html8.text,'html.parser')
